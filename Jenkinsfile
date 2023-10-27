@@ -7,6 +7,6 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
-        // add more stages if needed
+     
     }
 }
