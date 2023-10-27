@@ -4,9 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'mvn clean package'
+                script {
+                    def mvnHome = tool name: 'Maven', type: 'Maven'
+                    sh "${mvnHome}/bin/mvn clean install"
+                }
             }
         }
-
     }
 }
+
