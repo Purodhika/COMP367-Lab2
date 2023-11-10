@@ -5,11 +5,9 @@ pipeline {
         DOCKERHUB_USERNAME=credentials('Docker_Hub_Username')
     }
     stages {
-        stage('Maven Build') {
+        stage('Build') {
             steps {
-                withMaven(maven: 'maven3') {
-                sh 'mvn clean package'
-                }
+                bat 'mvn clean package'
             }
         }
         stage('Build Docker Image') {
