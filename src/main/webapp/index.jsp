@@ -25,7 +25,7 @@
         }
 
         // Display the greeting
-        document.getElementById("greeting").innerHTML = greeting + ", " + name + ", Welcome to COMP367";
+        document.getElementById("greeting").innerHTML = greeting + " " + name + "!" + " Welcome to COMP367";
 
         // Display the current time
         var timeString = "Current time is: " + hour + ":" + (minute < 10 ? "0" : "") + minute + ":" + (second < 10 ? "0" : "") + second;
